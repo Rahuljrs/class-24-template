@@ -6,7 +6,7 @@ body{
 }
 .header ul.navbar-nav {
     margin-left: 289px;
-    /* color: #000; */
+    
 }
 .header-bg{
     background-color: #e0e0e0;
@@ -37,8 +37,12 @@ img{
     position: absolute;
     transition: .4s;
 }
-a.active1{
+.header-menu ul li .blue{
     color:#3763eb ;
+}
+.header-menu ul li .blue::after{
+    width: 60%;
+    left: 15px;
 }
 .header-menu ul li:hover a::after{
     width:100%;
@@ -152,6 +156,7 @@ a.active1{
 }
 
 
+
 .service-item:hover .service-icon::after{
     width:30%;
     background-color: #fff;
@@ -223,9 +228,21 @@ a.active1{
     left: -6px;
     top: -8px;
 }
+.animation-btn a::after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    animation: example 2s ease-out infinite;
+    left: -1px;
+    top: -3px;
+}
  @keyframes example{
     0%{transform: scale(0);
-        opacity:1;
+        opacity:0;
     }
     25%{transform: scale(1);
         opacity:.5;
